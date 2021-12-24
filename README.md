@@ -1,2 +1,0 @@
-# eloiselewis.com
-personal website
