@@ -306,8 +306,7 @@ footer a:hover {
   padding: 1em;
 }
 
-#kenya-page {
-  background-color: #3f736e;
+.photo-page {
   font-family: "Montserrat", sans-serif;
   height: calc(100% - 150px);
   min-height: calc(100vh - 150px);
@@ -315,7 +314,16 @@ footer a:hover {
   padding-bottom: 5vh;
 }
 
-.kenya-heading {
+.kenya-page {
+  background-color: #3f736e;
+}
+
+.misc-page {
+  background: linear-gradient(110.47deg, #6d6f8c -12.11%, #3d3f57 70.27%);
+}
+
+.kenya-heading,
+.misc-heading {
   height: 100%;
   /* min-height: 100vh; */
   padding-top: 100px;
@@ -327,6 +335,12 @@ footer a:hover {
 .kenya-heading h1 {
   padding: 0;
   margin: 0;
+}
+
+.misc-heading h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
 }
 
 /* .kenya-video {
@@ -359,7 +373,8 @@ footer a:hover {
   height: 100%;
 }
 
-.kenya-row {
+.kenya-row,
+.misc-row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -367,19 +382,22 @@ footer a:hover {
   margin: 0 auto;
 }
 
-.kenya-column {
+.kenya-column,
+.misc-column {
   flex: 33%;
   max-width: 33%;
   padding: 0 4px;
 }
 
-.kenya-column img {
+.kenya-column img,
+.misc-column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
 
-.kenya-row img {
+.kenya-row img,
+.misc-row img {
   max-width: 100%;
 }
 
@@ -394,14 +412,16 @@ figure {
 } */
 
 @media screen and (max-width: 800px) {
-  .kenya-column {
+  .kenya-column,
+  .misc-column {
     flex: 50%;
     max-width: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .kenya-column {
+  .kenya-column,
+  .misc-column {
     flex: 100%;
     max-width: 100%;
   }
