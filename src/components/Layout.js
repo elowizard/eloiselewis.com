@@ -1,11 +1,15 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+import GlobalStyle from "./GlobalStyle";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, navbar, ...props }) => {
   return (
     <>
-      <Navbar />
-      <main>{children}</main>
+      <GlobalStyle />
+      <Navbar kind={navbar} />
+      <main {...props}>{children}</main>
+      <Footer />
     </>
   );
 };

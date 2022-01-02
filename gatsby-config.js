@@ -6,10 +6,28 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
+
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat\:400,500,600,800`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 90,
+          backgroundColor: `#fff`,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
