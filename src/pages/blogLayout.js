@@ -4,22 +4,31 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-// import styled from "styled-components";
+import { BlogTitle, DateTime, BlogArticle } from "../components/Typography";
+import styled from "styled-components";
 
 const BlogPage = (props) => {
   console.log(props);
   return (
-    <Layout>
-      <MDXProvider>
-        <GatsbyImage
-          image={getImage(props.data.mdx.frontmatter.image)}
-          alt="blog header"
-        />
-        <h1>{props.data.mdx.frontmatter.title}</h1>
-        <article>
-          <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
-        </article>
-      </MDXProvider>
+    <Layout navbar="back">
+      <ArticlePage>
+        <MDXProvider>
+          <GatsbyImage
+            image={getImage(props.data.mdx.frontmatter.image)}
+            alt="blog header"
+          />
+          <BlogWrapper>
+            <BlogTitle>{props.data.mdx.frontmatter.title}</BlogTitle>
+            <DateTime>
+              {props.data.mdx.frontmatter.date} &bull;{" "}
+              {props.data.mdx.timeToRead} minute read
+            </DateTime>
+            <BlogArticle>
+              <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+            </BlogArticle>
+          </BlogWrapper>
+        </MDXProvider>
+      </ArticlePage>
     </Layout>
   );
 };
@@ -31,6 +40,7 @@ export const query = graphql`
     mdx {
       frontmatter {
         title
+        date
         image {
           childImageSharp {
             gatsbyImageData(
@@ -64,3 +74,13 @@ export const query = graphql`
 //     }
 //   }
 // `;
+
+const ArticlePage = styled.div`
+  padding-top: 60px;
+  padding-bottom: 60px;
+`;
+
+const BlogWrapper = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+`;

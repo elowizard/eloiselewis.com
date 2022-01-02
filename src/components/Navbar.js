@@ -17,9 +17,14 @@ const Navbar = (props) => {
       </Link>
       <List>
         {props.kind === "back" ? (
-          <li>
-            <Link to="/">Back to home</Link>
-          </li>
+          <>
+            {/* <li>
+              <Link to="/">Blog</Link>
+            </li> */}
+            <li>
+              <Link to="/">Back to home</Link>
+            </li>
+          </>
         ) : (
           <>
             <li>
@@ -30,6 +35,9 @@ const Navbar = (props) => {
             </li>
             <li>
               <a href="#photography">Photography</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
             </li>
             <li>
               <a href="#contact">Follow Me</a>
