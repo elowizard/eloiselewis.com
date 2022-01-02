@@ -4,8 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { SectionTitle } from "../Typography";
 import { ButtonWrapper, TitleWrapper } from "../Wrappers";
 import { Link } from "gatsby";
-// import styled from "styled-components";
-// import { Center } from "../Wrappers";
+import styled from "styled-components";
 
 const SectionBlog = () => {
   return (
@@ -13,8 +12,15 @@ const SectionBlog = () => {
       <TitleWrapper>
         <SectionTitle>Latest blog post:</SectionTitle>
       </TitleWrapper>
-      <StaticImage src="../../images/Blog/London.jpg" alt="view of London" />
-      <h3>2021 - A Year in Review</h3>
+      <LatestArticle as={Link} to="/blogLayout/">
+        <LatestImage>
+          <StaticImage
+            src="../../images/Blog/London.jpg"
+            alt="view of London"
+          />
+        </LatestImage>
+        <LatestTitle>2021 - A Year in Review</LatestTitle>
+      </LatestArticle>
       <ButtonWrapper>
         <Link to="/blogLayout/">Read Latest &raquo;</Link>
         <Link to="/">View All &raquo;</Link>
@@ -24,3 +30,27 @@ const SectionBlog = () => {
 };
 
 export default SectionBlog;
+
+const LatestArticle = styled.div`
+  position: relative;
+  display: inline-block;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  margin-top: 30px;
+  margin-bottom: 50px;
+`;
+
+const LatestImage = styled.div`
+  opacity: 0.7;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+`;
+
+const LatestTitle = styled.h3`
+  font-size: 48px;
+  color: #5c5c5c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+`;
