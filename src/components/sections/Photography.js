@@ -3,7 +3,8 @@ import Section from "../Section";
 import { StaticImage } from "gatsby-plugin-image";
 import { PageTitle } from "../Typography";
 import styled from "styled-components";
-import { Center } from "../Wrappers";
+import { Link } from "gatsby";
+// import { Center } from "../Wrappers";
 
 const SectionPhotography = () => {
   return (
@@ -20,12 +21,12 @@ const SectionPhotography = () => {
           <StaticImage src="../../images/boat.jpg" alt="boat on lake" />
         </PhotoStrip>
         <ButtonWrapper>
-          <a href="/kenya/">
+          <Link to="/kenya/">
             View Kenya <b>&#8827;</b>
-          </a>
-          <a href="/misc/">
+          </Link>
+          <Link to="/misc/">
             View Misc. <b>&#8827;</b>
-          </a>
+          </Link>
         </ButtonWrapper>
       </PhotographyWrap>
     </Section>

@@ -21,11 +21,12 @@ const Footer = () => {
           <a
             href="https://github.com/elowizard/eloiselewis.com"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>
           . Hosted on{" "}
-          <a href="https://www.netlify.com/" target="_blank">
+          <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
             Netlify
           </a>
           .

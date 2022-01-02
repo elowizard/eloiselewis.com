@@ -37,7 +37,11 @@ const SectionResearch = () => {
         <P>
           <b>Link: </b>
           <em>
-            <a href="https://doi.org/10.3390/min11020195" target="_blank">
+            <a
+              href="https://doi.org/10.3390/min11020195"
+              target="_blank"
+              rel="noreferrer"
+            >
               https://doi.org/10.3390/min11020195
             </a>
           </em>

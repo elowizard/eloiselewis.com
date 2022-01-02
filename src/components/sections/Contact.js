@@ -12,7 +12,7 @@ const SectionContact = () => {
         <PageTitle as="h2">Find me on...</PageTitle>
       </Center>
       <LinksWrapper>
-        <a href="https://github.com/elowizard" target="_blank">
+        <a href="https://github.com/elowizard" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../images/github_grey.svg"
             alt="github logo"
@@ -25,6 +25,7 @@ const SectionContact = () => {
         <a
           href="https://www.linkedin.com/in/eloise-lewis-330b22146/"
           target="_blank"
+          rel="noreferrer"
         >
           <StaticImage
             src="../../images/linkedin_grey.svg"
@@ -35,7 +36,11 @@ const SectionContact = () => {
           />
           LinkedIn
         </a>
-        <a href="https://twitter.com/EloiseDoesChem" target="_blank">
+        <a
+          href="https://twitter.com/EloiseDoesChem"
+          target="_blank"
+          rel="noreferrer"
+        >
           <StaticImage
             src="../../images/twitter_grey.svg"
             alt="twitter logo"
