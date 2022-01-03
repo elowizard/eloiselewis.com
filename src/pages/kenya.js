@@ -25,16 +25,16 @@ const KenyaPage = () => {
         </KenyaVideo>
         <PhotoRow>
           <PhotoColumn>
-            <StaticImage src="./../images/Kenya/sunset.JPG" alt="sunset" />
+            <StaticImage src="./../images/Kenya/sunset.jpg" alt="sunset" />
             <StaticImage src="./../images/Kenya/boat.jpg" alt="boat" />
-            <StaticImage src="./../images/Kenya/giraffes.JPG" alt="giraffes" />
-            <StaticImage src="./../images/Kenya/tribe4.JPG" alt="maassai men" />
+            <StaticImage src="./../images/Kenya/giraffes.jpg" alt="giraffes" />
+            <StaticImage src="./../images/Kenya/tribe4.jpg" alt="maassai men" />
             <StaticImage
-              src="./../images/Kenya/hippo2.JPG"
+              src="./../images/Kenya/hippo2.jpg"
               alt="hippo in water"
             />
             <StaticImage
-              src="./../images/Kenya/student.JPG"
+              src="./../images/Kenya/student.jpg"
               alt="student with origami"
             />
           </PhotoColumn>
@@ -44,7 +44,7 @@ const KenyaPage = () => {
               alt="african elephant"
             />
             <StaticImage
-              src="./../images/Kenya/tribe2.JPG"
+              src="./../images/Kenya/tribe2.jpg"
               alt="maassai men and me"
             />
             <StaticImage
@@ -52,18 +52,18 @@ const KenyaPage = () => {
               alt="origami hearts"
             />
             <StaticImage
-              src="./../images/Kenya/elephant-family.JPG"
+              src="./../images/Kenya/elephant-family.jpg"
               alt="elephant family walking"
             />
-            <StaticImage src="./../images/Kenya/class.JPG" alt="students" />
+            <StaticImage src="./../images/Kenya/class.jpg" alt="students" />
             <StaticImage
-              src="./../images/Kenya/origami.JPG"
+              src="./../images/Kenya/origami.jpg"
               alt="origami lesson"
             />
           </PhotoColumn>
           <PhotoColumn>
             <StaticImage
-              src="./../images/Kenya/skull.JPG"
+              src="./../images/Kenya/skull.jpg"
               alt="animal skull on a spike"
             />
             <StaticImage
@@ -71,15 +71,15 @@ const KenyaPage = () => {
               alt="zebras on roadside"
             />
             <StaticImage
-              src="./../images/Kenya/tribe3.JPG"
+              src="./../images/Kenya/tribe3.jpg"
               alt="maasai men and me 2"
             />
             <StaticImage
-              src="./../images/Kenya/hippo.JPG"
+              src="./../images/Kenya/hippo.jpg"
               alt="hippo in water 2"
             />
-            <StaticImage src="./../images/Kenya/lioness.JPG" alt="lioness" />
-            <StaticImage src="./../images/Kenya/sunset2.JPG" alt="sunset 2" />
+            <StaticImage src="./../images/Kenya/lioness.jpg" alt="lioness" />
+            <StaticImage src="./../images/Kenya/sunset2.jpg" alt="sunset 2" />
           </PhotoColumn>
         </PhotoRow>
       </PhotoPage>
