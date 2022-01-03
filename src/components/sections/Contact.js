@@ -17,8 +17,8 @@ const SectionContact = () => {
             src="../../images/github_grey.svg"
             alt="github logo"
             layout="fixed"
-            width={65}
-            height={65}
+            width={64}
+            height={64}
           />
           GitHub
         </a>
@@ -31,8 +31,8 @@ const SectionContact = () => {
             src="../../images/linkedin_grey.svg"
             alt="linkedin logo"
             layout="fixed"
-            width={65}
-            height={65}
+            width={64}
+            height={64}
           />
           LinkedIn
         </a>
@@ -45,8 +45,8 @@ const SectionContact = () => {
             src="../../images/twitter_grey.svg"
             alt="twitter logo"
             layout="fixed"
-            width={65}
-            height={65}
+            width={64}
+            height={64}
           />
           Twitter
         </a>

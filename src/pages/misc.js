@@ -17,14 +17,14 @@ const MiscPage = () => {
         <PhotoRow>
           <PhotoColumn>
             <StaticImage
-              src="./../images/Miscellaneous/crystals.jpeg"
+              src="./../images/Miscellaneous/crystals.jpg"
               alt="crystals in flask"
             />
             <StaticImage
               src="./../images/Miscellaneous/butterfly.jpg"
               alt="butterfly on fruit"
             />
-            <StaticImage src="./../images/Miscellaneous/bug.JPG" alt="bug" />
+            <StaticImage src="./../images/Miscellaneous/bug.jpg" alt="bug" />
             <StaticImage
               src="./../images/Miscellaneous/big ben.jpg"
               alt="Big Ben London"
@@ -77,7 +77,7 @@ const MiscPage = () => {
               alt="gecko in bamboo"
             />
             <StaticImage
-              src="./../images/Miscellaneous/squirrel2.JPG"
+              src="./../images/Miscellaneous/squirrel2.jpg"
               alt="squirrel2"
             />
             <StaticImage
@@ -95,7 +95,7 @@ const MiscPage = () => {
           </PhotoColumn>
           <PhotoColumn>
             <StaticImage
-              src="./../images/Miscellaneous/cricket.JPG"
+              src="./../images/Miscellaneous/cricket.jpg"
               alt="cricket under blue light"
             />
             <StaticImage
@@ -111,7 +111,7 @@ const MiscPage = () => {
               alt="red arrows flying over Swansea"
             />
             <StaticImage
-              src="./../images/Miscellaneous/leaf.JPG"
+              src="./../images/Miscellaneous/leaf.jpg"
               alt="leaf close up"
             />
             <StaticImage

@@ -12,8 +12,8 @@ const Navbar = (props) => {
             src="./../images/logo.svg"
             alt="logo"
             layout="fixed"
-            width={60}
-            height={60}
+            width={58}
+            height={58}
           />
         </Link>
       </NavIcon>
