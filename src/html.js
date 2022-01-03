@@ -11,16 +11,23 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hi, I'm Eloise!" />
         <meta
           name="twitter:description"
           content="Latest blog posts, photography and more."
         />
-        <meta name="twitter:image" content="to do" />
-        <meta name="twitter:image:alt" content="eloiselewis.com website" />
-        <meta name="twitter:creator" content="@EloiseDoesChem" />
-        <meta name="twitter:site" content="@EloiseDoesChem" />
+        <meta
+          name="twitter:image"
+          content="https://www.eloiselewis.com/twitter-card.jpg"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="View over London eloiselewis.com"
+        />
+        <meta name="twitter:creator" content="@TheElowizard" />
+        <meta name="twitter:site" content="@TheElowizard" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-PH2X8PE4SY"
