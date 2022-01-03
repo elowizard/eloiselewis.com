@@ -25,61 +25,61 @@ const KenyaPage = () => {
         </KenyaVideo>
         <PhotoRow>
           <PhotoColumn>
-            <StaticImage src="../images/kenya/sunset.jpg" alt="sunset" />
-            <StaticImage src="../images/kenya/boat.jpg" alt="boat" />
-            <StaticImage src="../images/kenya/giraffes.jpg" alt="giraffes" />
-            <StaticImage src="../images/kenya/tribe4.jpg" alt="maassai men" />
+            <StaticImage src="../images/kenya2/sunset.jpg" alt="sunset" />
+            <StaticImage src="../images/kenya2/boat.jpg" alt="boat" />
+            <StaticImage src="../images/kenya2/giraffes.jpg" alt="giraffes" />
+            <StaticImage src="../images/kenya2/tribe4.jpg" alt="maassai men" />
             <StaticImage
-              src="../images/kenya/hippo2.jpg"
+              src="../images/kenya2/hippo2.jpg"
               alt="hippo in water"
             />
             <StaticImage
-              src="../images/kenya/student.jpg"
+              src="../images/kenya2/student.jpg"
               alt="student with origami"
             />
           </PhotoColumn>
           <PhotoColumn>
             <StaticImage
-              src="../images/kenya/elephant.jpg"
+              src="../images/kenya2/elephant.jpg"
               alt="african elephant"
             />
             <StaticImage
-              src="../images/kenya/tribe2.jpg"
+              src="../images/kenya2/tribe2.jpg"
               alt="maassai men and me"
             />
             <StaticImage
-              src="../images/kenya/hearts.jpg"
+              src="../images/kenya2/hearts.jpg"
               alt="origami hearts"
             />
             <StaticImage
-              src="../images/kenya/elephant-family.jpg"
+              src="../images/kenya2/elephant-family.jpg"
               alt="elephant family walking"
             />
-            <StaticImage src="../images/kenya/class.jpg" alt="students" />
+            <StaticImage src="../images/kenya2/class.jpg" alt="students" />
             <StaticImage
-              src="../images/kenya/origami.jpg"
+              src="../images/kenya2/origami.jpg"
               alt="origami lesson"
             />
           </PhotoColumn>
           <PhotoColumn>
             <StaticImage
-              src="../images/kenya/skull.jpg"
+              src="../images/kenya2/skull.jpg"
               alt="animal skull on a spike"
             />
             <StaticImage
-              src="../images/kenya/zebras-2.jpg"
+              src="../images/kenya2/zebras-2.jpg"
               alt="zebras on roadside"
             />
             <StaticImage
-              src="../images/kenya/tribe3.jpg"
+              src="../images/kenya2/tribe3.jpg"
               alt="maasai men and me 2"
             />
             <StaticImage
-              src="../images/kenya/hippo.jpg"
+              src="../images/kenya2/hippo.jpg"
               alt="hippo in water 2"
             />
-            <StaticImage src="../images/kenya/lioness.jpg" alt="lioness" />
-            <StaticImage src="../images/kenya/sunset2.jpg" alt="sunset 2" />
+            <StaticImage src="../images/kenya2/lioness.jpg" alt="lioness" />
+            <StaticImage src="../images/kenya2/sunset2.jpg" alt="sunset 2" />
           </PhotoColumn>
         </PhotoRow>
       </PhotoPage>

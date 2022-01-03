@@ -29,22 +29,6 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "kenyaimages",
-        path: "./src/images/kenya/",
-      },
-      __key: "misc",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "miscellaneousimages",
-        path: "./src/images/miscellaneous/",
-      },
-      __key: "miscellaneousimages",
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

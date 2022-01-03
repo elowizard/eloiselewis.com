@@ -15,7 +15,7 @@ const SectionBlog = () => {
       <LatestArticle as={Link} to="/blogLayout/">
         <LatestImage>
           <StaticImage
-            src="../../images/blog/london-panorama.jpg"
+            src="../../images/blog2/london-panorama.jpg"
             alt="view of London"
           />
         </LatestImage>
