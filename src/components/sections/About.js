@@ -15,6 +15,7 @@ const SectionAbout = () => {
             <StaticImage
               src="./../../images/me.png"
               alt="me"
+              quality={90}
               layout="constrained"
               width={240}
               height={240}
