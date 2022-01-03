@@ -12,7 +12,7 @@ const SectionBlog = () => {
       <TitleWrapper>
         <SectionTitle>Latest blog post:</SectionTitle>
       </TitleWrapper>
-      <LatestArticle as={Link} to="/blogLayout/">
+      <LatestArticle as={Link} to="/2021-a-year-in-review/">
         <LatestImage>
           <StaticImage
             src="../../images/blog2/london-panorama.jpg"
@@ -22,8 +22,8 @@ const SectionBlog = () => {
         <LatestTitle>2021 - A Year in Review</LatestTitle>
       </LatestArticle>
       <ButtonWrapper>
-        <Link to="/blogLayout/">Read Latest &raquo;</Link>
-        <Link to="/">View All &raquo;</Link>
+        <Link to="/2021-a-year-in-review/">Read Latest &raquo;</Link>
+        {/* <Link to="/">View All &raquo;</Link> */}
       </ButtonWrapper>
     </Section>
   );
