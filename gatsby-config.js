@@ -11,6 +11,15 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    "gatsby-transformer-sharp",
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
@@ -29,15 +38,7 @@ module.exports = {
         },
       },
     },
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
