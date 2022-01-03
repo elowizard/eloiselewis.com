@@ -4,19 +4,22 @@ import { StaticImage } from "gatsby-plugin-image";
 import { TextWrapper, Center } from "../Wrappers";
 // import styled from "styled-components";
 import { PageTitle, WhiteP } from "../Typography";
+import styled from "styled-components";
 
 const SectionAbout = () => {
   return (
     <Section id="about" className="green">
       <TextWrapper>
         <Center>
-          <StaticImage
-            src="./../../images/me.png"
-            alt="me"
-            layout="constrained"
-            width={240}
-            height={240}
-          />
+          <AboutImage>
+            <StaticImage
+              src="./../../images/me.png"
+              alt="me"
+              layout="constrained"
+              width={240}
+              height={240}
+            />
+          </AboutImage>
         </Center>
         <PageTitle>Hi, I'm Eloise!</PageTitle>
         <WhiteP>I’m a Science and Chemistry Teacher based in London.</WhiteP>
@@ -40,3 +43,11 @@ const SectionAbout = () => {
 };
 
 export default SectionAbout;
+
+const AboutImage = styled.div`
+  .gatsby-image-wrapper {
+    @media (max-width: 800px) {
+      max-width: 160px !important;
+    }
+  }
+`;

@@ -10,7 +10,7 @@ import styled from "styled-components";
 const BlogPage = (props) => {
   console.log(props);
   return (
-    <Layout navbar="back">
+    <Layout navbar="blog">
       <ArticlePage>
         <MDXProvider>
           <GatsbyImage
@@ -83,4 +83,9 @@ const ArticlePage = styled.div`
 const BlogWrapper = styled.div`
   max-width: 600px;
   margin: 0 auto;
+
+  @media (max-width: 800px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;

@@ -38,11 +38,16 @@ const LatestArticle = styled.div`
   padding-bottom: 30px; */
   margin-top: 30px;
   margin-bottom: 50px;
+  text-decoration: none;
 `;
 
 const LatestImage = styled.div`
   opacity: 0.7;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 600px) {
+    opacity: 1;
+  }
 `;
 
 const LatestTitle = styled.h3`
@@ -53,4 +58,18 @@ const LatestTitle = styled.h3`
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
+  white-space: nowrap;
+  text-decoration: none;
+
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    position: relative;
+    font-size: 24px;
+    transform: 0;
+    text-align: center;
+    padding-top: 8vh;
+  }
 `;

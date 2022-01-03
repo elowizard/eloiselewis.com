@@ -5,6 +5,12 @@ const TextWrapper = styled.div`
   margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -12,6 +18,12 @@ const TitleWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
   padding-top: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 const Center = styled.div`
@@ -46,6 +58,16 @@ const PhotoColumn = styled.div`
     vertical-align: middle;
     width: 100%;
   }
+
+  @media (max-width: 800px) {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    flex: 100%;
+    max-width: 100%;
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -53,6 +75,12 @@ const ButtonWrapper = styled.div`
   max-width: 600px;
   margin: 0 auto;
   justify-content: space-around;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
 
   a {
     background-color: #8c8c8c;

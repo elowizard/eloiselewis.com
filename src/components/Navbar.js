@@ -6,21 +6,32 @@ import styled from "styled-components";
 const Navbar = (props) => {
   return (
     <Wrapper>
-      <Link to="/">
-        <StaticImage
-          src="./../images/logo.svg"
-          alt="logo"
-          layout="fixed"
-          width={60}
-          height={60}
-        />
-      </Link>
+      <NavIcon>
+        <Link to="/">
+          <StaticImage
+            src="./../images/logo.svg"
+            alt="logo"
+            layout="fixed"
+            width={60}
+            height={60}
+          />
+        </Link>
+      </NavIcon>
       <List>
         {props.kind === "back" ? (
           <>
             {/* <li>
               <Link to="/">Blog</Link>
             </li> */}
+            <li>
+              <Link to="/">Back to home</Link>
+            </li>
+          </>
+        ) : props.kind === "blog" ? (
+          <>
+            <li>
+              <Link to="/">All blog posts</Link>
+            </li>
             <li>
               <Link to="/">Back to home</Link>
             </li>
@@ -83,6 +94,17 @@ const List = styled.ul`
     display: block;
     line-height: 1;
     font-size: 16px;
+    white-space: nowrap;
+
+    @media (max-width: 900px) {
+      /* font-size: 14px; */
+      padding: 25px 25px;
+    }
+
+    @media (max-width: 670px) {
+      font-size: 10px;
+      padding: 25px 12px;
+    }
   }
 
   a:hover {
@@ -93,5 +115,18 @@ const List = styled.ul`
   a:active {
     background-color: #d9d9d9;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+const NavIcon = styled.div`
+  .gatsby-image-wrapper {
+    @media (max-width: 670px) {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    display: none;
   }
 `;

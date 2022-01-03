@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { PhotoColumn, PhotoPage, PhotoRow } from "../components/Wrappers";
 import PhotoHeader from "../components/PhotoHeader";
+import styled from "styled-components";
 
 const KenyaPage = () => {
   return (
@@ -12,14 +13,16 @@ const KenyaPage = () => {
           title="Kenya"
           description="with Cardiff University School of Chemistry 2018"
         />
-        <iframe
-          width="800"
-          height="600"
-          src="https://www.youtube.com/embed/mTVMubQXnPI"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
+        <KenyaVideo>
+          <iframe
+            width="800"
+            height="600"
+            src="https://www.youtube.com/embed/mTVMubQXnPI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </KenyaVideo>
         <PhotoRow>
           <PhotoColumn>
             <StaticImage src="./../images/Kenya/sunset.JPG" alt="sunset" />
@@ -85,3 +88,25 @@ const KenyaPage = () => {
 };
 
 export default KenyaPage;
+
+const KenyaVideo = styled.div`
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+
+  ::after {
+    display: block;
+    content: "";
+    padding-top: 75%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;

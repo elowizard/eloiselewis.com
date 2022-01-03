@@ -58,8 +58,8 @@ const SectionContact = () => {
 export default SectionContact;
 
 const StyledSection = styled(Section)`
-  height: calc(100% - 150px);
-  min-height: calc(100vh - 150px);
+  height: calc(100% - 120px);
+  min-height: calc(100vh - 120px);
   padding-top: 80px;
   padding-bottom: 80px;
   /* box-shadow: inset 0px -4px 10px rgba(0, 0, 0, 0.25); */
@@ -72,12 +72,23 @@ const LinksWrapper = styled.div`
   gap: 80px;
   padding: 50px;
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+    padding-left: 30vw;
+    padding-right: 0;
+  }
+
   .gatsby-image-wrapper {
     display: flex;
     align-self: center;
     max-width: 60px;
     max-height: 60px;
     filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+
+    @media (max-width: 600px) {
+      max-width: 30px;
+      max-height: 30px;
+    }
   }
 
   a {

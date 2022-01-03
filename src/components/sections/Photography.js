@@ -32,7 +32,6 @@ const SectionPhotography = () => {
 export default SectionPhotography;
 
 const PhotographyWrap = styled.div`
-  /* padding-top: 50px; */
   padding-bottom: 80px;
   overflow: hidden;
   position: relative;
@@ -49,6 +48,10 @@ const PhotoStrip = styled.div`
   align-items: center;
   column-gap: 1.5vw;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    padding-top: 8vh;
+  }
 
   .gatsby-image-wrapper {
     max-width: 20vw;
