@@ -28,12 +28,22 @@ module.exports = {
       },
       __key: "images",
     },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
-
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "kenyaimages",
+        path: "./src/images/kenya/",
+      },
+      __key: "misc",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "miscellaneousimages",
+        path: "./src/images/miscellaneous/",
+      },
+      __key: "miscellaneousimages",
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -43,16 +53,12 @@ module.exports = {
         display: "swap",
       },
     },
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          quality: 80,
-          backgroundColor: `transparent`,
-          placeholder: `blurred`,
-        },
-      },
-    },
+    "gatsby-plugin-sharp",
   ],
 };
