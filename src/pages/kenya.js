@@ -67,7 +67,7 @@ const KenyaPage = () => {
               alt="animal skull on a spike"
             />
             <StaticImage
-              src="./../images/kenya/zebras(2).jpg"
+              src="./../images/kenya/zebras-2.jpg"
               alt="zebras on roadside"
             />
             <StaticImage
