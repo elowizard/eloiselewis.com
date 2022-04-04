@@ -42,13 +42,13 @@ const Navbar = (props) => {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#research">Research</a>
+              <a href="#blog">Blog</a>
             </li>
             <li>
               <a href="#photography">Photography</a>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <a href="#research">Research</a>
             </li>
             <li>
               <a href="#contact">Follow Me</a>

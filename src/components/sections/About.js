@@ -13,7 +13,7 @@ const SectionAbout = () => {
         <Center>
           <AboutImage>
             <StaticImage
-              src="./../../images/me.png"
+              src="./../../images/me2.png"
               alt="me"
               quality={90}
               layout="constrained"

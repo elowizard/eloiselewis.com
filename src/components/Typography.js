@@ -81,6 +81,8 @@ const BlogArticle = styled.article`
 
 const FooterText = styled.p`
   font-size: 16px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
   color: #6f6f6f;
 
   @media (max-width: 800px) {

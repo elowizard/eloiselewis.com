@@ -41,20 +41,20 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.footer`
-  height: 120px;
+  height: 80px;
   position: relative;
   box-shadow: 0px -16px 32px rgba(0, 0, 0, 0.27);
 
   @media (max-width: 800px) {
-    height: 100px;
+    height: 64px;
   }
 
   .gatsby-image-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     position: absolute;
-    top: -80px;
-    right: 16px;
+    top: -70px;
+    right: 8px;
     filter: drop-shadow(0px -16px 32px rgba(0, 0, 0, 0.25));
 
     @media (max-width: 800px) {
@@ -77,7 +77,7 @@ const Notice = styled.div`
   /* text-align: right; */
   margin-right: 210px;
   margin-left: 40px;
-  padding: 8px 0px;
+  padding: 5px 0px;
 
   @media (max-width: 800px) {
     margin-right: 110px;

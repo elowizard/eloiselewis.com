@@ -10,9 +10,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SectionAbout />
-      <SectionResearch />
-      <SectionPhotography />
       <SectionBlog />
+      <SectionPhotography />
+      <SectionResearch />
       <SectionContact />
     </Layout>
   );
