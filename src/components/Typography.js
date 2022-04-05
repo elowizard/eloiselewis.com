@@ -63,6 +63,7 @@ const DateTime = styled.h2`
   color: #6f6f6f;
   font-size: 12px;
   margin-top: 0;
+  padding-bottom: 8px;
 
   @media (max-width: 600px) {
     font-size: 10px;
@@ -73,6 +74,25 @@ const BlogArticle = styled.article`
   font-weight: 400;
   color: #6f6f6f;
   font-size: 18px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+
+const BlogLinkTitle = styled.h2`
+  font-weight: 500;
+  color: #6f6f6f;
+  font-size: 1.45vw;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  white-space: nowrap;
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
 
   @media (max-width: 600px) {
     font-size: 14px;
@@ -99,5 +119,6 @@ export {
   BlogTitle,
   DateTime,
   BlogArticle,
+  BlogLinkTitle,
   FooterText,
 };

@@ -22,7 +22,7 @@ const SectionBlog = () => {
         <LatestTitle>2021 - A Year in Review</LatestTitle>
       </LatestArticle>
       <ButtonWrapper>
-        <Link to="/2021-a-year-in-review/">Read Latest &raquo;</Link>
+        <Link to="/all-blogs/">All posts &raquo;</Link>
         {/* <Link to="/">View All &raquo;</Link> */}
       </ButtonWrapper>
     </Section>
