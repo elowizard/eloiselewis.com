@@ -23,7 +23,7 @@ const SectionBlog = () => {
       </LatestArticle>
       <ButtonWrapper>
         <Link to="/all-blogs/">All posts &raquo;</Link>
-        {/* <Link to="/">View All &raquo; </Link> */}
+        {/* <Link to="/">View All &raquo;</Link> */}
       </ButtonWrapper>
     </Section>
   );
