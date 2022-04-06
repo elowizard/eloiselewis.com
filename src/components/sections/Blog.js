@@ -45,9 +45,9 @@ const LatestImage = styled.div`
   opacity: 0.7;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     opacity: 1;
-  }
+  } */
 `;
 
 const LatestTitle = styled.h3`
@@ -60,17 +60,19 @@ const LatestTitle = styled.h3`
   margin: 0;
   white-space: nowrap;
   text-decoration: none;
+  transition: all 1s ease;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 800px) {
     font-size: 24px;
   }
 
   @media (max-width: 600px) {
-    position: relative;
+    /* position: relative; */
     font-size: 24px;
-    transform: 0;
-    text-align: center;
-    padding-top: 8vh;
+    /* transform: 0; */
+    /* text-align: center; */
+    /* padding-top: 8px; */
   }
 
   display: inline-block;
@@ -85,11 +87,16 @@ const LatestTitle = styled.h3`
     height: 4px;
     width: 0px;
     background-color: #5c5c5c;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     transition: all 1s ease;
   }
 
   :hover::after {
     width: 100%;
     background-color: #e5e5e5;
+  }
+
+  :hover {
+    color: #e5e5e5;
   }
 `;
