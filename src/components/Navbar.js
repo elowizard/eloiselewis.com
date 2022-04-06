@@ -95,6 +95,8 @@ const List = styled.ul`
     line-height: 1;
     font-size: 16px;
     white-space: nowrap;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in-out; */
 
     @media (max-width: 900px) {
       /* font-size: 14px; */
@@ -107,14 +109,30 @@ const List = styled.ul`
     }
   }
 
-  a:hover {
+  /* a:hover {
     background-color: #d9d9d9;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  } */
+
+  /* a:active {
+    background-color: #d9d9d9;
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  } */
+
+  a::after {
+    content: "";
+    display: block;
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    width: 0px;
+    background-color: #3f736e;
+    transition: all 0.5s ease-in-out;
   }
 
-  a:active {
-    background-color: #d9d9d9;
-    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  a:hover::after {
+    width: 100%;
   }
 `;
 

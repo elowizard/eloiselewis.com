@@ -13,11 +13,16 @@ import {
   SectionTitle,
   BlogLinkTitle,
   DateTime,
+  LinkDateTime,
 } from "../components/Typography";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
+// import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXProvider } from "@mdx-js/react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 // import styled from "styled-components";
 
-const AllBlogsPage = () => {
+const AllBlogsPage = (props) => {
+  console.log(props);
   return (
     <Layout navbar="back" style={{ backgroundColor: "#D9D9D9" }}>
       <BlogsHomepage>
@@ -26,26 +31,54 @@ const AllBlogsPage = () => {
         </TitleWrapper>
         <BlogRow>
           <BlogColumn>
-            <BlogLink as={Link} to="/2021-a-year-in-review/">
-              <StaticImage
+            <MDXProvider>
+              <BlogLink as={Link} to="/2021-a-year-in-review/">
+                {/* <StaticImage
                 src="../images/blog2/london-panorama.jpg"
                 alt="view of London"
-              />
-              <BlogLabel>
-                <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                <DateTime>Friday, 31 December 2021</DateTime>
-              </BlogLabel>
-            </BlogLink>
-            <BlogLink as={Link} to="/2021-a-year-in-review/">
-              <StaticImage
+              /> */}
+                <GatsbyImage
+                  className="linkImage"
+                  image={getImage(props.data.mdx.frontmatter.image)}
+                  alt="blog header"
+                />
+                <BlogLabel>
+                  {/* <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
+                  <DateTime>Friday, 31 December 2021</DateTime> */}
+                  <BlogLinkTitle>
+                    {props.data.mdx.frontmatter.title}
+                  </BlogLinkTitle>
+                  <LinkDateTime>
+                    {props.data.mdx.frontmatter.date} &bull;{" "}
+                    {props.data.mdx.timeToRead} minute read
+                  </LinkDateTime>
+                </BlogLabel>
+              </BlogLink>
+            </MDXProvider>
+            <MDXProvider>
+              <BlogLink as={Link} to="/2021-a-year-in-review/">
+                {/* <StaticImage
                 src="../images/blog2/london-panorama.jpg"
                 alt="view of London"
-              />
-              <BlogLabel>
-                <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                <DateTime>Friday, 31 December 2021</DateTime>
-              </BlogLabel>
-            </BlogLink>
+              /> */}
+                <GatsbyImage
+                  className="linkImage"
+                  image={getImage(props.data.mdx.frontmatter.image)}
+                  alt="blog header"
+                />
+                <BlogLabel>
+                  {/* <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
+                  <DateTime>Friday, 31 December 2021</DateTime> */}
+                  <BlogLinkTitle>
+                    {props.data.mdx.frontmatter.title}
+                  </BlogLinkTitle>
+                  <LinkDateTime>
+                    {props.data.mdx.frontmatter.date} &bull;{" "}
+                    {props.data.mdx.timeToRead} minute read
+                  </LinkDateTime>
+                </BlogLabel>
+              </BlogLink>
+            </MDXProvider>
           </BlogColumn>
           <BlogColumn>
             <BlogLink as={Link} to="/2021-a-year-in-review/">
@@ -76,6 +109,30 @@ const AllBlogsPage = () => {
 };
 
 export default AllBlogsPage;
+
+export const query = graphql`
+  query BlogLink {
+    mdx {
+      frontmatter {
+        title
+        date
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              aspectRatio: 4
+              layout: FULL_WIDTH
+              transformOptions: { fit: COVER }
+              quality: 90
+            )
+          }
+        }
+      }
+      slug
+      timeToRead
+      body
+    }
+  }
+`;
 
 // const BlogLink = styled.div`
 //   text-decoration: none;

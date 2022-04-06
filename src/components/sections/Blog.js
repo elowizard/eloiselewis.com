@@ -72,4 +72,24 @@ const LatestTitle = styled.h3`
     text-align: center;
     padding-top: 8vh;
   }
+
+  display: inline-block;
+  cursor: pointer;
+
+  ::after {
+    content: "";
+    display: block;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    width: 0px;
+    background-color: #5c5c5c;
+    transition: all 1s ease;
+  }
+
+  :hover::after {
+    width: 100%;
+    background-color: #e5e5e5;
+  }
 `;

@@ -99,6 +99,23 @@ const BlogLinkTitle = styled.h2`
   }
 `;
 
+const LinkDateTime = styled.h3`
+  font-weight: 400;
+  color: #6f6f6f;
+  font-size: 0.75vw;
+  margin-top: 0;
+  padding-bottom: 8px;
+  white-space: nowrap;
+
+  @media (max-width: 1000px) {
+    font-size: 0.9vw;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 8px;
+  }
+`;
+
 const FooterText = styled.p`
   font-size: 16px;
   margin-block-start: 0.5em;
@@ -120,5 +137,6 @@ export {
   DateTime,
   BlogArticle,
   BlogLinkTitle,
+  LinkDateTime,
   FooterText,
 };
