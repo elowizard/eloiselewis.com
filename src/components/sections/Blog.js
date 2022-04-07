@@ -31,19 +31,10 @@ const SectionBlog = () => {
 
 export default SectionBlog;
 
-const LatestArticle = styled.div`
-  position: relative;
-  display: inline-block;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
-  margin-top: 30px;
-  margin-bottom: 50px;
-  text-decoration: none;
-`;
-
 const LatestImage = styled.div`
   opacity: 0.7;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  transition: all 1s ease;
 
   /* @media (max-width: 600px) {
     opacity: 1;
@@ -90,13 +81,32 @@ const LatestTitle = styled.h3`
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     transition: all 1s ease;
   }
+`;
 
-  :hover::after {
-    width: 100%;
-    background-color: #e5e5e5;
+const LatestArticle = styled.div`
+  position: relative;
+  display: inline-block;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-decoration: none;
+
+  @media (max-width: 800px) {
+    margin-top: 20vh;
   }
-
   :hover {
-    color: #e5e5e5;
+    ${LatestImage} {
+      opacity: 1;
+    }
+
+    ${LatestTitle} {
+      color: #e5e5e5;
+
+      ::after {
+        width: 100%;
+        background-color: #e5e5e5;
+      }
+    }
   }
 `;
