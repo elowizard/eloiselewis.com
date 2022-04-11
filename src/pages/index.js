@@ -4,7 +4,7 @@ import SectionAbout from "./../components/sections/About";
 import SectionResearch from "../components/sections/Research";
 import SectionPhotography from "../components/sections/Photography";
 import SectionContact from "../components/sections/Contact";
-import SectionBlog from "../components/sections/Blog";
+import SectionBlog from "../components/sections/BlogSection";
 
 const IndexPage = () => {
   return (
