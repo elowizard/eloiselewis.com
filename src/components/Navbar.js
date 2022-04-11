@@ -29,9 +29,9 @@ const Navbar = (props) => {
           </>
         ) : props.kind === "blog" ? (
           <>
-            {/* <li>
-              <Link to="/">All blog posts</Link>
-            </li> */}
+            <li>
+              <Link to="/blog">All blog posts</Link>
+            </li>
             <li>
               <Link to="/">Back to home</Link>
             </li>

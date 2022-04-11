@@ -1,25 +1,19 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import Layout from "../components/Layout";
 import {
   TitleWrapper,
-  BlogsHomepage,
-  BlogRow,
-  BlogColumn,
-  BlogLink,
-  BlogLabel,
+  // BlogsHomepage,
+  // BlogLink,
+  // BlogLabel,
 } from "../components/Wrappers";
 import {
   SectionTitle,
   BlogLinkTitle,
-  DateTime,
   LinkDateTime,
 } from "../components/Typography";
 import { Link, graphql } from "gatsby";
-// import { MDXRenderer } from "gatsby-plugin-mdx";
-import { MDXProvider } from "@mdx-js/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-// import styled from "styled-components";
+import styled from "styled-components";
 
 const AllBlogsPage = (props) => {
   console.log(props);
@@ -29,80 +23,26 @@ const AllBlogsPage = (props) => {
         <TitleWrapper>
           <SectionTitle>All blog posts</SectionTitle>
         </TitleWrapper>
-        <BlogRow>
-          <BlogColumn>
-            <MDXProvider>
-              <BlogLink as={Link} to="/2021-a-year-in-review/">
-                {/* <StaticImage
-                src="../images/blog2/london-panorama.jpg"
-                alt="view of London"
-              /> */}
+        <BlogGrid>
+          {props.data.allMdx.edges.map((post, index) => {
+            return (
+              <BlogCard as={Link} to={`/blog/${post.node.slug}`} key={index}>
                 <GatsbyImage
                   className="linkImage"
-                  image={getImage(props.data.mdx.frontmatter.image)}
+                  image={getImage(post.node.frontmatter.image)}
                   alt="blog header"
                 />
                 <BlogLabel>
-                  {/* <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                  <DateTime>Friday, 31 December 2021</DateTime> */}
-                  <BlogLinkTitle>
-                    {props.data.mdx.frontmatter.title}
-                  </BlogLinkTitle>
+                  <BlogLinkTitle>{post.node.frontmatter.title}</BlogLinkTitle>
                   <LinkDateTime>
-                    {props.data.mdx.frontmatter.date} &bull;{" "}
-                    {props.data.mdx.timeToRead} minute read
+                    {post.node.frontmatter.date} &bull; {post.node.timeToRead}{" "}
+                    minute read
                   </LinkDateTime>
                 </BlogLabel>
-              </BlogLink>
-            </MDXProvider>
-            <MDXProvider>
-              <BlogLink as={Link} to="/2021-a-year-in-review/">
-                {/* <StaticImage
-                src="../images/blog2/london-panorama.jpg"
-                alt="view of London"
-              /> */}
-                <GatsbyImage
-                  className="linkImage"
-                  image={getImage(props.data.mdx.frontmatter.image)}
-                  alt="blog header"
-                />
-                <BlogLabel>
-                  {/* <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                  <DateTime>Friday, 31 December 2021</DateTime> */}
-                  <BlogLinkTitle>
-                    {props.data.mdx.frontmatter.title}
-                  </BlogLinkTitle>
-                  <LinkDateTime>
-                    {props.data.mdx.frontmatter.date} &bull;{" "}
-                    {props.data.mdx.timeToRead} minute read
-                  </LinkDateTime>
-                </BlogLabel>
-              </BlogLink>
-            </MDXProvider>
-          </BlogColumn>
-          <BlogColumn>
-            <BlogLink as={Link} to="/2021-a-year-in-review/">
-              <StaticImage
-                src="../images/blog2/london-panorama.jpg"
-                alt="view of London"
-              />
-              <BlogLabel>
-                <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                <DateTime>Friday, 31 December 2021</DateTime>
-              </BlogLabel>
-            </BlogLink>
-            <BlogLink as={Link} to="/2021-a-year-in-review/">
-              <StaticImage
-                src="../images/blog2/london-panorama.jpg"
-                alt="view of London"
-              />
-              <BlogLabel>
-                <BlogLinkTitle>2021 - A Year in Review</BlogLinkTitle>
-                <DateTime>Friday, 31 December 2021</DateTime>
-              </BlogLabel>
-            </BlogLink>
-          </BlogColumn>
-        </BlogRow>
+              </BlogCard>
+            );
+          })}
+        </BlogGrid>
       </BlogsHomepage>
     </Layout>
   );
@@ -111,37 +51,104 @@ const AllBlogsPage = (props) => {
 export default AllBlogsPage;
 
 export const query = graphql`
-  query BlogLink {
-    mdx {
-      frontmatter {
-        title
-        date
-        image {
-          childImageSharp {
-            gatsbyImageData(
-              aspectRatio: 4
-              layout: FULL_WIDTH
-              transformOptions: { fit: COVER }
-              quality: 90
-            )
+  query AllPosts {
+    allMdx(sort: { fields: slug, order: DESC }) {
+      edges {
+        node {
+          slug
+          timeToRead
+          frontmatter {
+            title
+            date
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  aspectRatio: 4
+                  layout: FULL_WIDTH
+                  transformOptions: { fit: COVER }
+                  quality: 90
+                )
+              }
+            }
           }
         }
       }
-      slug
-      timeToRead
-      body
     }
   }
 `;
 
-// const BlogLink = styled.div`
-//   text-decoration: none;
-//   a {
-//     height: 55%;
-//   }
+const BlogsHomepage = styled.div`
+  text-align: center;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 80px);
+`;
 
-//   a:hover {
-//     transform: translateX(2px) translateY(2px);
-//     opacity: 0.5;
-//   }
-// `;
+const BlogGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  row-gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+`;
+
+const BlogLabel = styled.div`
+  background-color: #f0f0f2;
+  /* padding: 20px 40px; */
+  width: 70%;
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  z-index: 10;
+  /* h2,
+  h3 {
+    margin: 0;
+    padding: 0;
+  } */
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 8px 10px;
+  /* top: -8%;
+  right: -25%; */
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease 0.2s;
+  @media (max-width: 800px) {
+    /* width: 60%; */
+    bottom: -40px;
+  }
+
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+`;
+
+const BlogCard = styled.div`
+  display: block;
+  position: relative;
+  text-decoration: none;
+  /* height: 55%; */
+
+  .linkImage {
+    opacity: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+
+  :hover {
+    .linkImage {
+      opacity: 0.7;
+      transform: translateX(2px) translateY(2px);
+      box-shadow: none;
+    }
+    ${BlogLabel} {
+      transform: translateX(-49%) translateY(2px);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+`;

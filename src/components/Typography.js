@@ -83,11 +83,10 @@ const BlogArticle = styled.article`
 const BlogLinkTitle = styled.h2`
   font-weight: 500;
   color: #6f6f6f;
-  font-size: 1.45vw;
-  padding-top: 8px;
+  font-size: 1.4vw;
+  /* padding-top: 8px; */
   padding-bottom: 8px;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
   white-space: nowrap;
 
   @media (max-width: 800px) {
@@ -102,9 +101,8 @@ const BlogLinkTitle = styled.h2`
 const LinkDateTime = styled.h3`
   font-weight: 400;
   color: #6f6f6f;
-  font-size: 0.75vw;
-  margin-top: 0;
-  padding-bottom: 8px;
+  font-size: 0.8vw;
+  margin: 0; /* padding-bottom: 8px; */
   white-space: nowrap;
 
   @media (max-width: 1000px) {
@@ -112,7 +110,7 @@ const LinkDateTime = styled.h3`
   }
 
   @media (max-width: 800px) {
-    font-size: 8px;
+    font-size: 10px;
   }
 `;
 
