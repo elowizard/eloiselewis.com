@@ -7,7 +7,7 @@ import { Center } from "../Wrappers";
 
 const SectionContact = () => {
   return (
-    <StyledSection id="contact" className="purple">
+    <StyledSection id="contact" className="yellow">
       <Center>
         <PageTitle as="h2">Find me on...</PageTitle>
       </Center>
@@ -58,8 +58,8 @@ const SectionContact = () => {
 export default SectionContact;
 
 const StyledSection = styled(Section)`
-  height: calc(100% - 120px);
-  min-height: calc(100vh - 120px);
+  height: calc(100% - 80px);
+  min-height: calc(100vh - 80px);
   padding-top: 80px;
   padding-bottom: 80px;
   /* box-shadow: inset 0px -4px 10px rgba(0, 0, 0, 0.25); */

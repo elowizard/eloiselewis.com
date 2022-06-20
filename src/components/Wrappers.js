@@ -83,7 +83,10 @@ const ButtonWrapper = styled.div`
   }
 
   a {
-    background-color: #8c8c8c;
+    background-color: #6f6f6f;
+    &.yellow {
+      background-color: #e9ac47;
+    }
     color: #f0f0f2;
     padding: 8px;
     text-decoration: none;

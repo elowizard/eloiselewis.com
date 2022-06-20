@@ -65,7 +65,7 @@ const Wrapper = styled.footer`
   }
 
   a {
-    color: #3f736e;
+    color: #7c9885;
   }
 
   a:hover {

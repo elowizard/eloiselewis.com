@@ -4,11 +4,8 @@ const PageTitle = styled.h1`
   font-size: 72px;
   font-weight: 400;
   color: #f0f0f2;
-<<<<<<< Updated upstream
-
-=======
+  margin-top: 0px;
   margin-top: 40px;
->>>>>>> Stashed changes
   @media (max-width: 600px) {
     font-size: 36px;
   }
@@ -17,7 +14,7 @@ const PageTitle = styled.h1`
 const SectionTitle = styled.h2`
   font-size: 40px;
   font-weight: 400;
-  color: #3f736e;
+  color: #e9ac47;
 
   @media (max-width: 600px) {
     font-size: 24px;
@@ -27,7 +24,7 @@ const SectionTitle = styled.h2`
 const PaperTitle = styled.h3`
   font-weight: 800;
   font-size: 18px;
-  color: #3f736e;
+  color: #e9ac47;
 
   @media (max-width: 600px) {
     font-size: 16px;
@@ -45,10 +42,15 @@ const WhiteP = styled.p`
 
 const P = styled.p`
   color: #6f6f6f;
-  font-size: 16px;
+  a {
+    &.yellow {
+      color: #e9ac47;
+    }
+    font-size: 16px;
 
-  @media (max-width: 600px) {
-    font-size: 14px;
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 `;
 
