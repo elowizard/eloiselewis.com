@@ -60,7 +60,10 @@ const SectionBlog = () => {
       />
 
       <ButtonWrapper>
-        <Link to="/blog/">All posts &raquo;</Link>
+        <Link to="/blog/" className="yellow">
+          All posts
+          {/* &raquo; */}
+        </Link>
         {/* <Link to="/">View All &raquo;</Link> */}
       </ButtonWrapper>
     </Section>

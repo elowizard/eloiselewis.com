@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const KenyaPage = () => {
   return (
-    <Layout navbar="back" style={{ backgroundColor: "#3f736e" }}>
+    <Layout navbar="back" style={{ backgroundColor: "#3F736E" }}>
       <PhotoPage>
         <PhotoHeader
           title="Kenya"

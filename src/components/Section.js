@@ -12,9 +12,10 @@ const Wrapper = styled.section`
   height: 100%;
   min-height: 100vh;
   &.green {
-    background-color: #3f736e;
+    background-color: #7c9885;
   }
-  &.purple {
-    background: linear-gradient(110.47deg, #6d6f8c -12.11%, #3d3f57 70.27%);
+  &.yellow {
+    /* background: linear-gradient(110.47deg, #f1cb8b -12.11%, #e9ac47 70.27%); */
+    background-color: #e9ac47cc;
   }
 `;

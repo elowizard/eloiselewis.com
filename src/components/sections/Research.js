@@ -41,6 +41,7 @@ const SectionResearch = () => {
               href="https://doi.org/10.3390/min11020195"
               target="_blank"
               rel="noreferrer"
+              className="yellow"
             >
               https://doi.org/10.3390/min11020195
             </a>
