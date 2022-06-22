@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon_new.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hi, I'm Eloise!" />
         <meta

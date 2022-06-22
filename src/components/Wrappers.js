@@ -3,7 +3,7 @@ import styled from "styled-components";
 const TextWrapper = styled.div`
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 80px;
 
   @media (max-width: 600px) {

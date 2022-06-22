@@ -20,4 +20,5 @@ const Wrapper = styled.section`
 const StyledPageTitle = styled(PageTitle)`
   padding-top: 30px;
   margin-bottom: 0;
+  margin-top: 0;
 `;

@@ -4,7 +4,11 @@ const PageTitle = styled.h1`
   font-size: 72px;
   font-weight: 400;
   color: #f0f0f2;
+<<<<<<< Updated upstream
 
+=======
+  margin-top: 40px;
+>>>>>>> Stashed changes
   @media (max-width: 600px) {
     font-size: 36px;
   }

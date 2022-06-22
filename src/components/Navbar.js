@@ -5,8 +5,9 @@ import styled from "styled-components";
 
 const Navbar = (props) => {
   return (
-    <Wrapper>
-      <NavIcon>
+    <Wrapper></Wrapper>
+
+    /* <NavIcon>
         <Link to="/">
           <StaticImage
             src="./../images/logo.svg"
@@ -16,13 +17,11 @@ const Navbar = (props) => {
             height={58}
           />
         </Link>
-      </NavIcon>
-      <List>
+      </NavIcon> */
+    /* <List>
         {props.kind === "back" ? (
           <>
-            {/* <li>
-              <Link to="/">Blog</Link>
-            </li> */}
+          
             <li>
               <Link to="/">Back to home</Link>
             </li>
@@ -54,9 +53,8 @@ const Navbar = (props) => {
               <a href="#contact">Follow Me</a>
             </li>
           </>
-        )}
-      </List>
-    </Wrapper>
+        )} */
+    /* </List> */
   );
 };
 
@@ -77,74 +75,72 @@ const Wrapper = styled.nav`
   z-index: 100;
 `;
 
-const List = styled.ul`
-  background-color: #f0f0f2;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// const List = styled.ul`
+//   background-color: #f0f0f2;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-  a {
-    color: #3f736e;
-    text-decoration: none;
-    font-weight: 800;
-    padding: 25px 50px;
-    display: block;
-    line-height: 1;
-    font-size: 16px;
-    white-space: nowrap;
-    cursor: pointer;
-    /* transition: all 0.3s ease-in-out; */
+//   a {
+//     color: #3f736e;
+//     text-decoration: none;
+//     font-weight: 800;
+//     padding: 25px 50px;
+//     display: block;
+//     line-height: 1;
+//     font-size: 16px;
+//     white-space: nowrap;
+//     cursor: pointer;
 
-    @media (max-width: 900px) {
-      /* font-size: 14px; */
-      padding: 25px 25px;
-    }
+//     @media (max-width: 900px) {
+//       padding: 25px 25px;
+//     }
 
-    @media (max-width: 670px) {
-      font-size: 10px;
-      padding: 25px 12px;
-    }
-  }
+//     @media (max-width: 670px) {
+//       font-size: 10px;
+//       padding: 25px 12px;
+//     }
+//   }
 
-  /* a:hover {
+/* a:hover {
     background-color: #d9d9d9;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   } */
 
-  /* a:active {
+/* a:active {
     background-color: #d9d9d9;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   } */
 
-  a::after {
-    content: "";
-    display: block;
-    margin-top: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 4px;
-    width: 0px;
-    background-color: #3f736e;
-    transition: all 0.5s ease-in-out;
-  }
+//   a::after {
+//     content: "";
+//     display: block;
+//     margin-top: 4px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     height: 4px;
+//     width: 0px;
+//     background-color: #3f736e;
+//     transition: all 0.5s ease-in-out;
+//   }
 
-  a:hover::after {
-    width: 100%;
-  }
-`;
+//   a:hover::after {
+//     width: 100%;
+//   }
+// `;
 
-const NavIcon = styled.div`
-  .gatsby-image-wrapper {
-    @media (max-width: 670px) {
-      width: 40px !important;
-      height: 40px !important;
-    }
-  }
+// const NavIcon = styled.div`
+//   .gatsby-image-wrapper {
+//     @media (max-width: 670px) {
+//       width: 40px !important;
+//       height: 40px !important;
+//     }
+//   }
 
-  @media (max-width: 400px) {
-    display: none;
-  }
-`;
+//   @media (max-width: 400px) {
+//     display: none;
+//   }
+// `;

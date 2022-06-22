@@ -28,7 +28,7 @@ const Footer = () => {
         </FooterText>
       </Notice>
       <StaticImage
-        src="./../images/logo2.svg"
+        src="./../images/logo_new.svg"
         alt="logo"
         layout="constrained"
         width={160}
