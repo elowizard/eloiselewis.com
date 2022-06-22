@@ -1,11 +1,79 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 const Navbar = (props) => {
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    // document.getElementById("menuicon").style.display = "none";
+
+    var fadeTarget = document.getElementById("menuicon");
+    var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+        fadeTarget.style.opacity = 1;
+      }
+      if (fadeTarget.style.opacity > 0) {
+        fadeTarget.style.opacity = 0;
+      } else {
+        clearInterval(fadeEffect);
+      }
+    }, 10);
+  }
+
+  // document.getElementById("menuicon").addEventListener("click", )
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    // document.getElementById("menuicon").style.display = "block";
+
+    var fadeTarget = document.getElementById("menuicon");
+    var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+        fadeTarget.style.opacity = 0;
+      }
+      if (fadeTarget.style.opacity < 1) {
+        fadeTarget.style.opacity = 1;
+      } else {
+        clearInterval(fadeEffect);
+      }
+    }, 10);
+  }
   return (
-    <Wrapper></Wrapper>
+    <Wrapper>
+      <div id="mySidenav" className="sidenav">
+        <button className="closebtn" onClick={closeNav}>
+          &loarr;
+        </button>
+        <a className="option" href="#">
+          About
+        </a>
+        <a className="option" href="#">
+          Blog
+        </a>
+        <a className="option" href="#">
+          Photography
+        </a>
+        <a className="option" href="#">
+          Research
+        </a>
+        <a className="option" href="#">
+          Follow Me
+        </a>
+      </div>
+
+      <span style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}>
+        <img id="menuicon" className="menuicon" src="menu_icon.svg" />
+        {/* <StaticImage
+          src="./../images/menu_icon.svg"
+          alt="logo"
+          layout="fixed"
+          className="menuicon"
+          width={60}
+          height={44}
+        /> */}
+      </span>
+    </Wrapper>
 
     /* <NavIcon>
         <Link to="/">
@@ -61,19 +129,152 @@ const Navbar = (props) => {
 export default Navbar;
 
 const Wrapper = styled.nav`
-  background-color: #f0f0f2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 10px;
-  box-shadow: 0px 2px 10px 0px black;
-  z-index: 100;
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #00000099, #00000000);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    box-shadow: 5px 0px 0px 0px #e9ac47 inset;
+    /* border-style: none inset none none;
+        border-color: #e9ac47; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidenav a {
+    padding: 20px 58px 0px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: #f0f0f2;
+    /* text-align: center; */
+
+    /* transition: 0.3s; */
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.5));
+  }
+  a.option {
+    padding: 50px 8px 8px 20px;
+  }
+
+  /* .sidenav a:hover {
+        transform: translateX(2px) translateY(2px);
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.6));
+      } */
+
+  .closebtn:hover {
+    color: #e9ac47;
+  }
+
+  .option::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #e9ac47;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .option:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  /* .option::before {
+        background: #e9ac47;
+        content: "";
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        z-index: -1;
+      }
+
+      .option:hover::before {
+        transform: scaleX(1);
+      }
+
+      .option::before {
+        background: linear-gradient(90deg, #e9ac47);
+        content: "";
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+        z-index: -1;
+      } */
+
+  /* .option::after {
+        content: "";
+        display: block;
+        margin-top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 4px;
+        width: 0px;
+        background-color: #e9ac47;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .option:hover::after {
+        width: 100%;
+      } */
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .menuicon {
+    position: fixed;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.6));
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menuicon:hover {
+    transform: translateX(3px) translateY(3px);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
 `;
+
+// const Wrapper = styled.nav`
+//   background-color: #f0f0f2;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding-left: 10px;
+//   box-shadow: 0px 2px 10px 0px black;
+//   z-index: 100;
+// `;
 
 // const List = styled.ul`
 //   background-color: #f0f0f2;
