@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -41,7 +41,79 @@ const Navbar = (props) => {
   }
   return (
     <Wrapper>
-      <div id="mySidenav" className="sidenav">
+      {props.kind === "back" ? (
+        <>
+          <Link to="/" style={{ fontSize: "30px", cursor: "pointer" }}>
+            <img id="homeicon" className="homeicon" src="../home_icon.svg" />
+          </Link>
+        </>
+      ) : props.kind === "blog" ? (
+        <>
+          <ul className="navul">
+            <div id="mySidenav" className="sidenav">
+              <button className="closebtn" onClick={closeNav}>
+                <img
+                  id="backarrow"
+                  className="backarrow"
+                  src="../back_arrow.svg"
+                />
+              </button>
+              <a className="option" href="/blog">
+                All blog posts
+              </a>
+              <a className="option" href="/">
+                Back to home
+              </a>
+            </div>
+          </ul>
+
+          <span
+            style={{ fontSize: "30px", cursor: "pointer" }}
+            onClick={openNav}
+          >
+            <img id="menuicon" className="menuicon" src="../menu_icon.svg" />
+          </span>
+        </>
+      ) : (
+        <>
+          <ul className="navul">
+            <div id="mySidenav" className="sidenav">
+              <button className="closebtn" onClick={closeNav}>
+                <img
+                  id="backarrow"
+                  className="backarrow"
+                  src="back_arrow.svg"
+                  width="80px"
+                />
+              </button>
+              <a className="option" href="#about">
+                About
+              </a>
+              <a className="option" href="#blog">
+                Blog
+              </a>
+              <a className="option" href="#photography">
+                Photography
+              </a>
+              <a className="option" href="#research">
+                Research
+              </a>
+              <a className="option" href="#contact">
+                Follow Me
+              </a>
+            </div>
+          </ul>
+
+          <span
+            style={{ fontSize: "30px", cursor: "pointer" }}
+            onClick={openNav}
+          >
+            <img id="menuicon" className="menuicon" src="menu_icon.svg" />
+          </span>
+        </>
+      )}
+
+      {/* <div id="mySidenav" className="sidenav">
         <button className="closebtn" onClick={closeNav}>
           &loarr;
         </button>
@@ -64,15 +136,7 @@ const Navbar = (props) => {
 
       <span style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}>
         <img id="menuicon" className="menuicon" src="menu_icon.svg" />
-        {/* <StaticImage
-          src="./../images/menu_icon.svg"
-          alt="logo"
-          layout="fixed"
-          className="menuicon"
-          width={60}
-          height={44}
-        /> */}
-      </span>
+      </span> */}
     </Wrapper>
 
     /* <NavIcon>
@@ -129,11 +193,15 @@ const Navbar = (props) => {
 export default Navbar;
 
 const Wrapper = styled.nav`
+  .navul {
+    margin: 0;
+  }
+
   .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10001;
     top: 0;
     left: 0;
     background: linear-gradient(90deg, #00000099, #00000000);
@@ -169,8 +237,18 @@ const Wrapper = styled.nav`
         filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.6));
       } */
 
-  .closebtn:hover {
-    color: #e9ac47;
+  button {
+    padding-top: 10px;
+    background: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.4));
+  }
+
+  button:hover {
+    cursor: pointer;
+    transform: translateX(2px) translateY(2px);
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6));
   }
 
   .option::before {
@@ -240,13 +318,18 @@ const Wrapper = styled.nav`
     margin-left: 50px;
   }
 
-  .menuicon {
+  .menuicon,
+  .homeicon {
     position: fixed;
     filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.6));
     transition: all 0.5s ease-in-out;
+    z-index: 10001;
+    padding-left: 20px;
+    padding-top: 20px;
   }
 
-  .menuicon:hover {
+  .menuicon:hover,
+  .homeicon:hover {
     transform: translateX(3px) translateY(3px);
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
   }
