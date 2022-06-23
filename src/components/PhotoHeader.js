@@ -21,4 +21,8 @@ const StyledPageTitle = styled(PageTitle)`
   padding-top: 30px;
   margin-bottom: 0;
   margin-top: 0;
+
+  @media (max-width: 1000px) {
+    padding-top: 80px;
+  }
 `;

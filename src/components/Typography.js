@@ -23,7 +23,7 @@ const SectionTitle = styled.h2`
 
 const PaperTitle = styled.h3`
   font-weight: 800;
-  font-size: 18px;
+  font-size: 20px;
   color: #e9ac47;
 
   @media (max-width: 600px) {
@@ -33,7 +33,7 @@ const PaperTitle = styled.h3`
 
 const WhiteP = styled.p`
   color: #f0f0f2;
-  font-size: 16px;
+  font-size: 18px;
 
   @media (max-width: 600px) {
     font-size: 14px;
@@ -42,15 +42,14 @@ const WhiteP = styled.p`
 
 const P = styled.p`
   color: #6f6f6f;
+  font-size: 18px;
   a {
     &.yellow {
       color: #e9ac47;
     }
-    font-size: 16px;
-
-    @media (max-width: 600px) {
-      font-size: 14px;
-    }
+  }
+  @media (max-width: 600px) {
+    font-size: 14px;
   }
 `;
 

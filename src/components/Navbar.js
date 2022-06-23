@@ -342,6 +342,15 @@ const Wrapper = styled.nav`
       font-size: 18px;
     }
   }
+
+  @media (max-width: 900px) {
+    img {
+      width: 60px;
+    }
+    .sidenav a {
+      font-size: 20px;
+    }
+  }
 `;
 
 // const Wrapper = styled.nav`
