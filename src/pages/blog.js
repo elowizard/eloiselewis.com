@@ -1,11 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import {
-  TitleWrapper,
-  // BlogsHomepage,
-  // BlogLink,
-  // BlogLabel,
-} from "../components/Wrappers";
+import { TitleWrapper } from "../components/Wrappers";
 import {
   SectionTitle,
   BlogLinkTitle,
@@ -100,26 +95,18 @@ const BlogGrid = styled.div`
 
 const BlogLabel = styled.div`
   background-color: #f0f0f2;
-  /* padding: 20px 40px; */
   width: 70%;
   position: absolute;
   bottom: -25%;
   left: 0;
   z-index: 10;
-  /* h2,
-  h3 {
-    margin: 0;
-    padding: 0;
-  } */
   left: 50%;
   transform: translate(-50%, 0);
   padding: 8px 10px;
-  /* top: -8%;
-  right: -25%; */
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease 0.2s;
+
   @media (max-width: 800px) {
-    /* width: 60%; */
     bottom: -40px;
   }
 
@@ -132,7 +119,6 @@ const BlogCard = styled.div`
   display: block;
   position: relative;
   text-decoration: none;
-  /* height: 55%; */
 
   .linkImage {
     opacity: 1;

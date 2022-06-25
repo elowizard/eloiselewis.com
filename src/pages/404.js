@@ -4,8 +4,6 @@ import { TitleWrapper } from "../components/Wrappers";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
-// import { Link } from "gatsby";
-
 const NotFoundPage = () => {
   return (
     <LayoutError navbar="back" style={{ backgroundColor: "#5c5c5c" }}>

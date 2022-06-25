@@ -74,7 +74,6 @@ const Wrapper = styled.footer`
 `;
 
 const Notice = styled.div`
-  /* text-align: right; */
   margin-right: 210px;
   margin-left: 40px;
   padding: 5px 0px;

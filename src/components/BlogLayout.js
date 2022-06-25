@@ -60,7 +60,6 @@ export const query = graphql`
 `;
 
 const ArticlePage = styled.div`
-  /* padding-top: 60px; */
   padding-bottom: 60px;
 `;
 

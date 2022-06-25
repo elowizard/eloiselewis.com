@@ -102,36 +102,6 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-// const BlogRow = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 0 4px;
-//   max-width: 1400px;
-//   margin: 0 auto;
-
-//   .gatsby-image-wrapper {
-//     max-width: 100%;
-//     margin: 0;
-//   }
-
-//   a:hover {
-//     opacity: 0.5;
-//   }
-// `;
-
-// const BlogColumn = styled.div`
-//   flex: 50%;
-//   max-width: 50%;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   /* padding-bottom: 8%; */
-
-//   @media (max-width: 800px) {
-//     flex: 100%;
-//     max-width: 100%;
-//   }
-// `;
-
 export {
   TextWrapper,
   TitleWrapper,
@@ -140,9 +110,4 @@ export {
   PhotoRow,
   PhotoColumn,
   ButtonWrapper,
-  // BlogsHomepage,
-  // BlogRow,
-  // BlogColumn,
-  // BlogLink,
-  // BlogLabel,
 };
