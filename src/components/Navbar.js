@@ -45,7 +45,7 @@ const Navbar = (props) => {
               alt="home icon"
               id="homeicon"
               className="homeicon"
-              src="../home_icon.svg"
+              src="/home_icon.svg"
             />
           </Link>
         </>
@@ -58,7 +58,7 @@ const Navbar = (props) => {
                   alt="back arrow"
                   id="backarrow"
                   className="backarrow"
-                  src="../back_arrow.svg"
+                  src="/back_arrow.svg"
                 />
               </button>
               <a className="option" href="/blog">
@@ -80,7 +80,7 @@ const Navbar = (props) => {
               alt="menu icon"
               id="menuicon"
               className="menuicon"
-              src="../menu_icon.svg"
+              src="/menu_icon.svg"
             />
           </button>
         </>
